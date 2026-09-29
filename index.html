@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT Duta Kencana Sejahtera</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Konfigurasi Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            duta: {
+              dark: '#2A2A2A',
+              gold: '#B8974B',
+              cream: '#F8F7F3',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-duta-cream text-slate-800 font-sans antialiased scroll-smooth">
+
+  <!-- NAVBAR -->
+  <nav class="bg-duta-cream shadow-sm border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+
+        <a href="#" class="flex items-center gap-3">
+
+          <!-- Logo -->
+          <img src="assets/images/logo.png" alt="Logo PT DKS" class="h-12 w-auto object-contain">
+
+          <div class="flex flex-col">
+            <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-widest mt-1">
+              PT. Duta Kencana Sejahtera
+            </span>
+          </div>
+
+        </a>
+
+        <!-- Desktop Menu -->
+<div class="hidden md:flex space-x-8 font-semibold text-sm text-slate-600">
+  <a href="#about" class="hover:text-duta-gold transition duration-300">About Us</a>
+  <a href="#services" class="hover:text-duta-gold transition duration-300">Core Business</a>
+  <a href="#clients" class="hover:text-duta-gold transition duration-300">Clients</a>
+  <a href="#contact" class="hover:text-duta-gold transition duration-300">Contact</a>
+</div>
+
+<!-- Mobile Hamburger Button -->
+<button
+  id="mobile-menu-button"
+  class="md:hidden text-duta-dark text-2xl focus:outline-none"
+  aria-label="Open navigation menu"
+>
+  ☰
+</button>
+
+      </div>
+    </div>
+  </nav>
+  <!-- Mobile Menu -->
+<div
+  id="mobile-menu"
+  class="hidden md:hidden fixed top-[81px] left-0 right-0 z-40 bg-duta-cream border-b border-slate-200 shadow-lg"
+>
+  <div class="px-6 py-4 space-y-4 font-semibold text-sm text-slate-600">
+
+    <a
+      href="#about"
+      class="mobile-menu-link block hover:text-duta-gold transition duration-300"
+    >
+      About Us
+    </a>
+
+    <a
+      href="#services"
+      class="mobile-menu-link block hover:text-duta-gold transition duration-300"
+    >
+      Core Business
+    </a>
+
+    <a
+      href="#clients"
+      class="mobile-menu-link block hover:text-duta-gold transition duration-300"
+    >
+      Clients
+    </a>
+
+    <a
+      href="#contact"
+      class="mobile-menu-link block hover:text-duta-gold transition duration-300"
+    >
+      Contact
+    </a>
+
+  </div>
+</div>
+
+
+  <!-- HERO SECTION -->
+  <section class="bg-duta-dark text-white py-24 relative overflow-hidden">
+
+    <!-- Aksen garis emas tipis di latar belakang -->
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-duta-gold via-transparent to-transparent"></div>
+
+    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        Your Trusted Business Partner in Manufacturing
+      </h1>
+
+      <p class="text-lg md:text-xl font-light text-slate-300 mb-10">
+        We are ready to provide you with the best service as expected or beyond.
+      </p>
+
+      <a
+        href="#services"
+        class="bg-duta-gold hover:opacity-90 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition hover:scale-105"
+      >
+        Explore Our Services
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- TENTANG KAMI -->
+  <section id="about" class="py-24 bg-duta-cream overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- SISI KIRI: Gambar -->
+        <div class="relative">
+
+          <div class="absolute -top-6 -left-6 w-32 h-32 bg-white rounded-xl transform rotate-12 shadow-sm"></div>
+
+          <div class="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-duta-gold/30 rounded-xl transform -rotate-12"></div>
+
+          <img
+            src="assets/images/fasilitas.jpeg"
+            alt="Fasilitas PT DKS"
+            class="relative z-10 w-full h-[450px] object-cover rounded-2xl shadow-xl border border-slate-200"
+          >
+
+          <!-- Floating Card -->
+          <div class="absolute -bottom-8 -right-8 z-20 bg-white p-5 rounded-xl shadow-2xl border border-slate-100 hidden md:block w-56">
+
+            <div class="flex items-center gap-4">
+
+              <div class="w-12 h-12 bg-duta-gold rounded-full flex items-center justify-center text-white font-bold text-xl shadow-inner">
+                ✓
+              </div>
+
+              <div>
+                <p class="text-sm font-extrabold text-duta-dark">
+                  High Precision
+                </p>
+
+                <p class="text-xs text-slate-500 font-medium">
+                  Manufacturing
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- SISI KANAN: Teks & Konten -->
+        <div class="relative z-10 flex flex-col justify-center">
+
+          <div class="inline-block mb-3">
+            <span class="text-xs font-bold text-duta-gold tracking-widest uppercase bg-duta-gold/10 px-3 py-1 rounded-full">
+              About The Company
+            </span>
+          </div>
+
+          <h2 class="text-3xl md:text-4xl font-extrabold text-duta-dark mb-6 leading-tight">
+            Driving Innovation in Industrial Manufacturing
+          </h2>
+
+          <p class="text-slate-600 mb-8 text-base leading-relaxed">
+            In accordance with the promise of independence for welfare nation, we believe this promise must be fulfilled by all elements of society. With a sense of optimism and a spirit of independence, we started at the doorstep level to become a successful organization by becoming a trusted business partner.
+          </p>
+
+
+          <!-- 4 Pilar Modern -->
+          <div class="grid grid-cols-2 gap-y-4 gap-x-2 mb-10">
+
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-white shadow-sm border border-slate-100 rounded-lg flex items-center justify-center text-sm">
+                ⚙️
+              </div>
+              <span class="font-bold text-slate-700 text-sm">
+                CNC Machinery
+              </span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-white shadow-sm border border-slate-100 rounded-lg flex items-center justify-center text-sm">
+                🏭
+              </div>
+              <span class="font-bold text-slate-700 text-sm">
+                Fabrication
+              </span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-white shadow-sm border border-slate-100 rounded-lg flex items-center justify-center text-sm">
+                ✨
+              </div>
+              <span class="font-bold text-slate-700 text-sm">
+                Surface Plating
+              </span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-white shadow-sm border border-slate-100 rounded-lg flex items-center justify-center text-sm">
+                📐
+              </div>
+              <span class="font-bold text-slate-700 text-sm">
+                QC Tools
+              </span>
+            </div>
+
+          </div>
+
+
+          <!-- Legality Box -->
+          <div class="bg-white p-6 rounded-xl border-l-4 border-duta-gold shadow-sm">
+
+            <h4 class="font-bold text-duta-dark mb-4 text-sm uppercase tracking-wide">
+              Company Legality
+            </h4>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-600">
+
+              <div>
+                <p class="text-xs text-slate-400 mb-1">NIB</p>
+                <p class="font-semibold text-duta-dark">
+                  1109230059731
+                </p>
+              </div>
+
+              <div>
+                <p class="text-xs text-slate-400 mb-1">NPWP</p>
+                <p class="font-semibold text-duta-dark">
+                  31.715.318.7-432.000
+                </p>
+              </div>
+
+              <div>
+                <p class="text-xs text-slate-400 mb-1">Notary</p>
+                <p class="font-semibold text-duta-dark">
+                  Irmik S.H
+                </p>
+              </div>
+
+              <div>
+                <p class="text-xs text-slate-400 mb-1">Akta Pendirian</p>
+                <p class="font-semibold text-duta-dark">
+                  14 (Feb 2018)
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CORE BUSINESS / LAYANAN -->
+  <section id="services" class="bg-white py-16 border-t border-b border-slate-100">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <h2 class="text-3xl font-bold text-center text-duta-dark mb-4">
+        Our Core Business
+      </h2>
+
+      <div class="w-24 h-1 bg-duta-gold mx-auto mb-12 rounded"></div>
+
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div class="bg-duta-cream p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border-t-4 border-duta-gold">
+
+          <h3 class="text-xl font-bold mb-4 text-duta-dark">
+            Machining & Dies Mold
+          </h3>
+
+          <p class="text-slate-600 text-sm mb-4">
+            High-precision manufacturing of industrial equipment and components. We have the ability to design and make machines upon customer's request.
+          </p>
+
+          <ul class="text-xs text-slate-500 list-disc pl-4 space-y-1">
+            <li>WELE CNC Machining Center</li>
+            <li>CAMPRO CNC Vertical Machining</li>
+            <li>HISION VMC</li>
+            <li>SKM T60 Standard ZDM Machine</li>
+          </ul>
+
+        </div>
+
+
+        <!-- Card 2 -->
+        <div class="bg-duta-cream p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border-t-4 border-duta-gold">
+
+          <h3 class="text-xl font-bold mb-4 text-duta-dark">
+            Surface Treatment & Finishing
+          </h3>
+
+          <p class="text-slate-600 text-sm mb-4">
+            Plating used to decorate objects, for corrosion inhibition, to improve solderability, and alter conductivity.
+          </p>
+
+          <ul class="text-xs text-slate-500 list-disc pl-4 space-y-1">
+            <li>Nickel Plating (Ni)</li>
+            <li>Copper Plating (Cu) & Zinc Plating</li>
+            <li>Buffing & Trimming</li>
+            <li>Sandblasting</li>
+          </ul>
+
+        </div>
+
+
+        <!-- Card 3 -->
+        <div class="bg-duta-cream p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border-t-4 border-duta-gold">
+
+          <h3 class="text-xl font-bold mb-4 text-duta-dark">
+            Fabrication & Welding
+          </h3>
+
+          <p class="text-slate-600 text-sm mb-4">
+            Ability to make industrial utility and supporting tools such as Trolley, Platform, Daisha, Conveyor, and various steel structures.
+          </p>
+
+          <ul class="text-xs text-slate-500 list-disc pl-4 space-y-1">
+            <li>Inverter Welding Machine (Co)</li>
+            <li>Electric Welding Machine (RHINO)</li>
+            <li>Argon Welding Machine</li>
+            <li>Cuttingwell & Hand Grinding</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- KLIEN KAMI -->
+  <section
+    id="clients"
+    class="py-16 bg-duta-cream max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+  >
+
+    <h2 class="text-3xl font-bold text-duta-dark mb-4">
+      Our Trusted Clients
+    </h2>
+
+    <div class="w-24 h-1 bg-duta-gold mx-auto mb-8 rounded"></div>
+
+    <p class="text-slate-600 max-w-2xl mx-auto mb-10">
+      We are proud to invite you as a co-partner as well as a customer to grow and develop together. Here are some of the companies we work with:
+    </p>
+
+
+    <div class="flex flex-wrap justify-center gap-4 text-sm font-bold text-slate-500">
+
+      <span class="bg-white px-4 py-2 rounded shadow-sm border border-slate-200">
+        ASTRA Otoparts
+      </span>
+
+      <span class="bg-white px-4 py-2 rounded shadow-sm border border-slate-200">
+        YAMAHA
+      </span>
+
+      <span class="bg-white px-4 py-2 rounded shadow-sm border border-slate-200">
+        KOMATSU
+      </span>
+
+      <span class="bg-white px-4 py-2 rounded shadow-sm border border-slate-200">
+        HONDA
+      </span>
+
+      <span class="bg-white px-4 py-2 rounded shadow-sm border border-slate-200">
+        TOYOTA
+      </span>
+
+      <span class="bg-white px-4 py-2 rounded shadow-sm border border-slate-200">
+        MITSUBISHI
+      </span>
+
+      <span class="bg-white px-4 py-2 rounded shadow-sm border border-slate-200">
+        DAIHATSU
+      </span>
+
+      <span class="bg-white px-4 py-2 rounded shadow-sm border border-slate-200">
+        DENSO
+      </span>
+
+      <span class="bg-white px-4 py-2 rounded shadow-sm border border-slate-200">
+        SIEMENS
+      </span>
+
+      <span class="bg-white px-4 py-2 rounded shadow-sm border border-slate-200">
+        WIKA
+      </span>
+
+      <span class="bg-white px-4 py-2 rounded shadow-sm border border-slate-200">
+        MATTEL
+      </span>
+
+      <span class="bg-white px-4 py-2 rounded shadow-sm border border-slate-200">
+        ABB
+      </span>
+
+    </div>
+  </section>
+
+
+  <!-- KONTAK KAMI -->
+  <section id="contact" class="bg-duta-dark text-white py-16">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-12">
+
+        <h2 class="text-3xl font-bold mb-4">
+          Contact Information
+        </h2>
+
+        <div class="w-24 h-1 bg-duta-gold mx-auto rounded"></div>
+
+      </div>
+
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+        <!-- Alamat Workshop -->
+        <div class="space-y-6">
+
+          <div>
+            <h4 class="text-lg font-bold text-duta-gold mb-1">
+              HEAD OFFICE
+            </h4>
+
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Jl. Mustika Sari No. 92,<br>
+              Kel. Bojongmenteng, Bekasi 17117
+            </p>
+          </div>
+
+
+          <div>
+            <h4 class="text-lg font-bold text-duta-gold mb-1">
+              Plant 1
+            </h4>
+
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Rira Green Park Warehouse and Office<br>
+              Jl. Raya Industri No. 9A Blok E7 Lemah Abang,<br>
+              Cikarang Utara, Bekasi
+            </p>
+          </div>
+
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+            <div>
+              <h4 class="text-lg font-bold text-duta-gold mb-1">
+                Plant 2
+              </h4>
+
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Jl. Margi Utami No. 76,<br>
+                Bantargebang, Bekasi
+              </p>
+            </div>
+
+
+            <div>
+              <h4 class="text-lg font-bold text-duta-gold mb-1">
+                Plant 3
+              </h4>
+
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Jl. Kramat Jawa No. 80,<br>
+                Mustikasari, Mustika Jaya, Bekasi
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Kontak Person -->
+        <div class="bg-white text-slate-800 p-8 rounded-xl shadow-xl h-fit border-t-4 border-duta-gold">
+
+          <h3 class="text-2xl font-bold mb-2 text-duta-dark">
+            Get In Touch
+          </h3>
+
+          <div class="w-12 h-1 bg-duta-gold mb-6 rounded"></div>
+
+          <p class="text-2xl font-black text-duta-dark mb-1">
+            ADITYA P. SUSENO
+          </p>
+
+          <p class="text-sm font-semibold text-duta-gold mb-8 uppercase tracking-wide">
+            Business Development & Marketing Director
+          </p>
+
+
+          <div class="space-y-4">
+
+            <div class="flex items-center">
+
+              <span class="bg-duta-cream text-duta-gold p-3 rounded-full mr-4 shadow-sm border border-slate-100">
+                📞
+              </span>
+
+              <p class="font-semibold text-slate-700">
+                +62 816-2626-57
+              </p>
+
+            </div>
+
+
+            <div class="flex items-center">
+
+              <span class="bg-duta-cream text-duta-gold p-3 rounded-full mr-4 shadow-sm border border-slate-100">
+                ✉️
+              </span>
+
+              <p class="font-semibold text-slate-700 break-all">
+                ptdutakencanasejahtera554@gmail.com
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-[#1a1a1a] text-slate-500 py-6 text-center text-sm border-t border-slate-800">
+
+    <p>
+      &copy; 2026 PT. Duta Kencana Sejahtera. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
