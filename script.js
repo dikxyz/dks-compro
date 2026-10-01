@@ -53,3 +53,108 @@ mobileMenuLinks.forEach(function (link) {
   });
 
 });
+
+// ========================================
+// SCROLL REVEAL ANIMATION
+// ========================================
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver(
+  function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.15
+  }
+);
+
+revealElements.forEach(function (element) {
+  revealObserver.observe(element);
+});
+
+// ========================================
+// WHATSAPP BUSINESS INQUIRY
+// ========================================
+
+const inquiryForm = document.getElementById("inquiry-form");
+
+if (inquiryForm) {
+
+  inquiryForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("inquiry-name").value.trim();
+    const company = document.getElementById("inquiry-company").value.trim();
+    const message = document.getElementById("inquiry-message").value.trim();
+
+    const whatsappNumber = "62816262657";
+
+    const whatsappMessage =
+`Hello PT Duta Kencana Sejahtera,
+
+I would like to make a business inquiry.
+
+Name: ${name}
+Company: ${company || "-"}
+
+Project / Inquiry:
+${message}
+
+Thank you.`;
+
+    const whatsappURL =
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(whatsappURL, "_blank");
+
+  });
+
+}
+
+// ========================================
+// BACK TO TOP
+// ========================================
+
+const backToTopButton = document.getElementById("back-to-top");
+
+if (backToTopButton) {
+
+  window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 500) {
+
+      backToTopButton.classList.remove(
+        "opacity-0",
+        "invisible",
+        "translate-y-4"
+      );
+
+    } else {
+
+      backToTopButton.classList.add(
+        "opacity-0",
+        "invisible",
+        "translate-y-4"
+      );
+
+    }
+
+  });
+
+  backToTopButton.addEventListener("click", function () {
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  });
+
+}
